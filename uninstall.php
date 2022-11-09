@@ -18,3 +18,5 @@ if (get_option('twchr_delete_all') == 1){
 
 
 ?>
+
+Sugerencia de Jeremias Reevolutiva
