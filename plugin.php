@@ -8,9 +8,28 @@
  * Version: 0.0.1
  */
 
-namespace Kucrut\ViteForWPExample\React;
 
-require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/inc/frontend.php';
+ add_action( 'admin_menu', 'gsc_react_plugin_init_menu' );
 
-Frontend\bootstrap();
+ /**
+  * Init Admin Menu.
+  *
+  * @return void
+  */
+ function gsc_react_plugin_init_menu() {
+     add_menu_page( __( 'GSC Plugin React', 'gsc_react_plugin'), __( 'GSC Plugin React', 'gsc_react_plugin'), 'manage_options', 'gsc_react_plugin', 'gsc_react_plugin_admin_page', 'dashicons-admin-generic', '2.1' );
+ }
+ 
+ /**
+  * Init Admin Page.
+  *
+  * @return void
+  */
+ function gsc_react_plugin_admin_page() {
+     require_once plugin_dir_path( __FILE__ ) . 'inc/backend.php';
+ }
+
+require 'inc/shortcode.php';
+
+require 'vite-load.php';
+

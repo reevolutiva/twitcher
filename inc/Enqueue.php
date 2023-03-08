@@ -2,18 +2,22 @@
 
 declare( strict_types = 1 );
 
-namespace Kucrut\ViteForWPExample\React\Frontend;
+namespace Kucrut\ViteForWPExample\React\Enqueue;
 
 use Kucrut\Vite;
 
 /**
- * Frontend bootstrapper
+ * Frontend Enqueue
  *
  * @return void
  */
-function bootstrap(): void {
+function frontend(): void {
 	add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_script' );
 	add_action( 'wp_footer', __NAMESPACE__ . '\\render_app' );
+}
+
+function backend(){
+	add_action('admin_enqueue_scripts', __NAMESPACE__ . '\\enqueue_script');
 }
 
 /**
