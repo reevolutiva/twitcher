@@ -32,11 +32,12 @@ function render_app(): void {
  */
 function enqueue_script(): void {
 	Vite\enqueue_asset(
-		dirname( __DIR__ ) . '/js/dist',
+		dirname(__DIR__) . '/js/dist',
 		'js/src/main.jsx',
 		[
 			'handle' => 'vite-for-wp-react',
 			'in-footer' => true,
+			'dependencies' => ['wp-api']
 		]
 	);
 }

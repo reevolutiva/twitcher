@@ -1,5 +1,5 @@
 {
-	"name": "kucrut/vite-for-wp-example-react",
+	"name": "kucrut/twitcher",
 	"description": "A plugin to demonstrate Vite for WP integration.",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-only",
